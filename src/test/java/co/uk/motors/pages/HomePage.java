@@ -1,4 +1,12 @@
 package co.uk.motors.pages;
 
-public class HomePage {
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage extends BasePage {
+    public HomePage(WebDriver driver)
+    {
+        this.driver =driver;
+        PageFactory.initElements(driver,this);
+    }
 }

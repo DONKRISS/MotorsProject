@@ -20,11 +20,11 @@ Feature: Customer can search for Cars for sale
     Examples:
       |Postcode   | CarMake        | CarModel         | MinPrice          | MixPrice    |
       |NE8 3DD    | BMW            |  X6              |       £6,000      | £100,000    |
-      |NE8 3DD    | Rolls-Royce    |  Ghost           |       £20,000     | £1,000,000  |
-      |NE8 3DD    | Make (Any)     |  Model (Any)     | MinPrice (Any)    | MinPrice (Any)  |
+#      |NE8 3DD    | Rolls-Royce    |  Ghost           |       £20,000     | £1,000,000  |
+#      |NE8 3DD    | Make (Any)     |  Model (Any)     | MinPrice (Any)    | MinPrice (Any)  |
 
 
-
+@ignore
 
   Scenario Outline: Customer cant Search for any car
 
