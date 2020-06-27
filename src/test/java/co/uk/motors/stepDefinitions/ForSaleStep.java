@@ -1,12 +1,21 @@
-package co.uk.motors.stepDefinations;
+package co.uk.motors.stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ForSaleStep {
+    WebDriver driver;
+
     @Given("i navigate to Motors.co.uk Homepage")
     public void i_navigate_to_Motors_co_uk_Homepage() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+
+        driver.navigate().to("https://www.motors.co.uk/");
 
     }
 
