@@ -20,24 +20,23 @@ Feature: Customer can search for Cars for sale
 
     Examples:
       |Postcode   | CarMake        | CarModel         | MinPrice          | MaxPrice    |
-      |NE8 3DD    | BMW            |  X6              |       £6,000      | £100,000    |
-#      |NE8 3DD    | Rolls-Royce    |  Ghost           |       £20,000     | £1,000,000  |
-#      |NE8 3DD    | Make (Any)     |  Model (Any)     | MinPrice (Any)    | MinPrice (Any)  |
+      |NE8 3DD    | BMW            |  5 Series        |       £6,000      | £100,000    |
+   |NE8 3DD    | Rolls-Royce    |  Ghost           |       £20,000     | £1,000,000  |
+#      |NE8 3DD    |      |       |     |   |
 
 
-#@ignore
-#
-#  Scenario Outline: Customer cant Search for any car
-#
-#    Given i navigate to Motors.co.uk Homepage
-#    And i do not input "<Postcode>" into postcode field for buy
-#    And i select "<CarMake>" for buy
-#    And i select "<CarModel>" for buy
-#    And i select "<MinPrice>" for buy
-#    And i select "<MaxPrice>" for buy
-#    When i should not be able click on Search
-#    Then a <"Message"> should be displayed
-#
-#    Examples:
-#      |Postcode   | CarMake        | CarModel         | MinPrice          | MaxPrice    |Message|
-#      |           | BMW            |  X6              |       £6,000      | £100,000    | Please Enter a valid UK Postcode|
+ @Regression  @ignore
+  Scenario Outline: Customer cant Search for any car
+
+    Given i navigate to Motors.co.uk Homepage
+    And i do not input "<Postcode>" into postcode field for buy
+    And i select "<CarMake>" for buy
+    And i select "<CarModel>" for buy
+    And i select "<MinPrice>" for buy
+    And i select "<MaxPrice>" for buy
+    When i should not be able click on Search
+    Then a "<Message>" should be displayed
+
+    Examples:
+      |Postcode   | CarMake        | CarModel         | MinPrice          | MaxPrice    |Message|
+      |           | BMW            |  X6              |       £6,000      | £100,000    | Please Enter a valid UK Postcode|

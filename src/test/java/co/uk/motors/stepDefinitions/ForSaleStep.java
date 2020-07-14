@@ -57,6 +57,11 @@ public class ForSaleStep extends BasePage
     homePage.selectMaxPrice(maxPrice);
     }
 
+    @When("i click on more options on the page")
+    public void i_click_on_more_options_on_the_page() {
+        homePage.clickOnMoreOptionButton();
+    }
+
     @When("i click on Search")
     public void i_click_on_Search() {
         searchResultPage = homePage.clickOnSearchButton();
@@ -77,21 +82,34 @@ public class ForSaleStep extends BasePage
 
 
 
-    @Given("i do not input {string} into postcode field for buy")
-    public void i_do_not_input_into_postcode_field_for_buy(String string) {
-
-    }
+//    @Given("i do not input {string} into postcode field for buy")
+//    public void i_do_not_input_into_postcode_field_for_buy(String errormessage) {
+//      homePage.selectErrorMessage(errormessage);
+//    }
 
     @When("i should not be able click on Search")
     public void i_should_not_be_able_click_on_Search() {
 
     }
 
-    @Then("a <\"Message\"> should be displayed")
+    @Then("a {string} should be displayed")
     public void a_Message_should_be_displayed() {
 
     }
 
+
+    @Given("i do not input {string} into postcode field for buy")
+    public void i_do_not_input_into_postcode_field_for_buy(String string) {
+
+    }
+
+
+
+
+    @When("i select colors")
+    public void i_select_colors() {
+
+    }
 
 
 

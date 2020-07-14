@@ -1,5 +1,6 @@
 package co.uk.motors.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -63,6 +64,20 @@ public class HomePage extends BasePage
         searchButton.click();
         return new SearchResultPage(driver);
     }
+
+    public void isSubmitButtonEnabled()
+    {
+        Assert.assertTrue(searchButton.isEnabled());
+
+    }
+
+    @FindBy(css = ".btn.btn--3rd.btn--ghost.adv")
+    private WebElement moreOptionButton;
+    public void   clickOnMoreOptionButton()
+    {
+        moreOptionButton.click();
+    }
+
 
 
 
