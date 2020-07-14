@@ -29,7 +29,6 @@ public class ForSaleStep extends BasePage
         driver.navigate().to("https://www.motors.co.uk/");
 
     }
-
     @Given("i enter {string} into postcode field for buy")
     public void i_enter_into_postcode_field_for_buy(String postcode) {
         homePage.enterPostcode(postcode);
@@ -61,6 +60,49 @@ public class ForSaleStep extends BasePage
     public void i_click_on_more_options_on_the_page() {
         homePage.clickOnMoreOptionButton();
     }
+
+    @When("i select {string} from location")
+    public void i_select_from_location(String distance) {
+       homePage.selectDistance(distance);
+    }
+    @When("i click {string} from the list")
+    public void i_click_from_the_list(String Bodystyle) {
+        homePage.clickOnBodystyleOption();
+
+    }
+
+
+    @When("i select {string} from Age and mileage")
+    public void i_select_from_Age_and_mileage(String vehicleAge)
+    {
+        homePage.selectVehicleAge(vehicleAge);
+    }
+
+    @When("i select {string} from vehicle spec")
+    public void i_select_from_vehicle_spec(String VehicleSpec) {
+        homePage.selectVehicleSpec(VehicleSpec);
+    }
+
+    @When("i select {string} from running cost")
+    public void i_select_from_running_cost(String insurance) {
+        homePage.selectInsuranceGroup(insurance);
+    }
+
+    @When("i select {string} from drop down")
+    public void i_select_from_drop_down(String vehiclemilage) {
+        homePage.selectVehicleMilage(vehiclemilage);
+    }
+
+    @When("i select {string} fuel type")
+    public void i_select_fuel_type(String vehicleFuelTypes) {
+        homePage.selectVehicleFuelTypes(vehicleFuelTypes);
+    }
+
+    @When("i select {string} from tax")
+    public void i_select_from_tax(String VehicleAnnualTax) {
+        homePage.selectVehicleAnnualTax(VehicleAnnualTax);
+    }
+
 
     @When("i click on Search")
     public void i_click_on_Search() {
