@@ -78,10 +78,63 @@ public class HomePage extends BasePage
         moreOptionButton.click();
     }
 
+    @FindBy(id = "Distance")
+    private WebElement distance;
+    public void selectDistance(String carDistance)
+    {
+        selectElementByVisibleText(distance,carDistance);
+    }
 
+    @FindBy(className = "label")
+   private WebElement bodystyleOptions;
+    public void clickOnBodystyleOption()
+    {
+        bodystyleOptions.click();
+    }
 
+    @FindBy(id = "Age")
+    private WebElement vehicleAge;
+    public void  selectVehicleAge(String AgeMileage)
+    {
+        selectElementByVisibleText(vehicleAge,AgeMileage);
+    }
 
+    @FindBy(id = "Transmissions")
+    private WebElement VehicleSpec;
+    public void selectVehicleSpec(String carspec)
+    {
+        selectElementByVisibleText(VehicleSpec,carspec);
+    }
 
+    @FindBy(id ="SelectedInsuranceGroup")
+    private WebElement insurancegroup;
+    public void selectInsuranceGroup(String insurance)
+    {
+        selectElementByVisibleText(insurancegroup,insurance);
+    }
+
+    @FindBy(id = "Mileage")
+    private WebElement vehiclemilage;
+    public void selectVehicleMilage(String millage)
+    {
+        selectElementByVisibleText(vehiclemilage,millage);
+    }
+
+    @FindBy(id = "FuelTypes")
+    private WebElement vehicleFuelTypes;
+    public void selectVehicleFuelTypes(String FuelType)
+    {
+        selectElementByVisibleText(vehicleFuelTypes,FuelType);
+    }
+
+   @FindBy(id = "SelectedCostAnnualTax")
+    private WebElement VehicleAnnualTax;
+
+    public void selectVehicleAnnualTax(String VehicleTax)
+    {
+            selectElementByVisibleText(VehicleAnnualTax,VehicleTax);
+
+    }
 
 
 
