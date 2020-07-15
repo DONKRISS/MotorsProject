@@ -20,8 +20,8 @@ Feature: Customer can search for Cars for sale
 
     Examples:
       |Postcode   | CarMake        | CarModel         | MinPrice          | MaxPrice    |
-#      |NE8 3DD    | BMW            |  5 Series        |       £6,000      | £100,000    |
-#      |NE8 3DD    | Rolls-Royce    |  Ghost           |       £20,000     | £1,000,000  |
+      |NE83DD    | BMW            |  5 Series        |       £6,000      | £100,000    |
+      |NE83DD    | Rolls-Royce    |  Ghost           |       £20,000     | £1,000,000  |
 #      |NE8 3DD    |      |       |     |   |
 
 
