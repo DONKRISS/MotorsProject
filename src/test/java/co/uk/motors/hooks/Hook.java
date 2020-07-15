@@ -37,6 +37,6 @@ public class Hook extends BrowserManager
                         e.printStackTrace();
                     }
                 }
-//        closeBrowser();
+                    closeBrowser();
     }
 }
